@@ -1,0 +1,124 @@
+.row1{
+    display: flex;
+    
+    background-color: #ecdada;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column1 {
+    flex: 50%;
+    padding: 10px;
+     /* Should be removed. Only for demonstration */
+    margin-top: 150px;
+    background-color: white;
+    
+  }
+
+  .column-1{
+      flex: 65%;
+      margin-left: 30px;
+      height: auto;
+      margin-right: 10px;
+      background-color:white;
+  }
+
+  .column-2{
+    margin-right: 15px;
+    height: auto;
+    margin-left: 30px;
+  }
+
+  .Profile .left-section .vendor-head .profile-pic {
+    position: relative;
+    overflow-y: hidden;
+    height: 375px;
+    width: 100%;
+}
+.BlogBox .img-style, .button:disabled, .CityBox .img-style, .GenieForm .genie-field, .GenieForm .genie-field-no-fixed-height, .GenieFormOpen .genie-field, .GenieFormOpen .genie-field-no-fixed-height, .primary-btn, .Profile .left-section .vendor-head .profile-pic .profile-actions .action-box, .radius, .RealWeddingBox .img-style, .tertiary-btn, .vendor-dashboard-root, .vendor-dashboard-root .vendor-sidenav-root, .VendorRoot .view-all, .venue-concierge .vc-gold-form-field, .venue-concierge .vc-gold-form-field-full, .venue-concierge .vc-gold-form-field-nofixed-height {
+    border-radius: 2px;
+}
+
+.vendor-name{
+    font-family: 'Merriweather', serif;
+    text-align: justify;
+    text-decoration: dashed;
+    font-size: xx-large;
+}
+
+table,th,td,tr{
+    border: 0.5px solid black ;
+    font-size: medium;
+    width:80%;
+    margin-top: 20px;
+
+}
+
+th{
+    text-justify: auto;
+}
+
+.card-text{
+    margin-top: 5px;
+}
+
+
+
+.column1{
+    background-color:wheat;
+    color: brown;
+}
+
+.contact-info{
+    color: brown;
+}
+
+.img-centre{
+    align-items: center; justify-content: center; flex-direction: column;
+    object-position: center;
+    margin-top: 20px;
+    
+}
+
+.card-text{
+    margin-top: 5px;
+    text-decoration: burlywood;
+    color: black;
+}
+
+.about{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 25px;
+    padding: 10px;
+    background-color: white;
+}
+
+
+
+  .card-text{
+    margin-top: 5px;
+    text-decoration: burlywood;
+    color: black;
+}
+  
+.bold{
+  font-weight: bolder;
+}
+
+.tab{
+  margin-right: 40px;
+  background-color: white;
+}
+
+p{
+  color: black;
+}
+
+.bg-white{
+  background-color: white;
+}
+
+.col1{
+  background-color:white; 
+  margin-left: 40px;
+}

@@ -1,0 +1,48 @@
+element.style {
+}
+body * {
+    color: inherit;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: none;
+}
+.Blog .text-center {
+    text-align: center;
+}
+.bg-white p {
+    background-color: #fff;
+    padding-left: 80px;
+    text-align: left;
+}
+.Blog .w-1-12, .Blog .w-2-12, .Blog .w-3-12, .Blog .w-4-12, .Blog .w-5-12, .Blog .w-6-12, .Blog .w-7-12, .Blog .w-8-12, .Blog .w-9-12, .Blog .w-10-12, .Blog .w-11-12, .Blog .w-12-12 {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+.Blog {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.Blog {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+body {
+    font-family: proxima-nova,sans-serif;
+}
+body {
+    margin: 0;
+    color: #4a4a4a;
+    font-size: 14px;
+    min-height: 100%;
+    line-height: 26px;
+    font-weight: 400;
+}
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}

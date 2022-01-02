@@ -1,0 +1,71 @@
+<%- include("partials/header.ejs") %>
+
+
+<div class="row1">
+  <div class="column1 col1" >
+    <h1 style="display: inline; font-size: xx-large;" class="vendor-name"><%= pandit.name %></h1> 
+    <img class=""src="https://images.wedmegood.com/images/icons/verified-vendors/Verified+(desk+web).svg" alt="" style=" display: inline;">
+    <div class = "img-div-set">
+      <img class="img-centre img-set" src="<%= pandit.imgUrl %>" >
+    </div>
+    <br>
+    <h1 style="color: brown;">VIVAAH CERTIFIED✔️</h1><h2 style="font-size: large;"></h2>(Registered on Vivaah since <%= pandit.time %>) </h2>
+    <br>
+    <h2 style="font-size: large;">Experience- <%= pandit.exp %> </h2>
+    <h2 style="font-size: large;">Culture- <%= pandit.culture %></h2>
+    <br>
+    <h2 style="font-size: large;">*Terms and Conditions</h2>
+    <h3>50% advance is mandatory</h3>
+    <h3>Outstation Travel & Stay charges borne by client</h3>    
+  </div>
+  <div class="column1 column-2 tab">
+      <h2>Pricings</h2>
+      <table >
+        <tbody>
+            <tr>
+              <th>Category</th>
+              <th>Prices</th>
+            </tr>
+            <% for(var i = 0; i < pandit.pricing.length; i++){ %>
+                <tr>
+                    <td><%= pandit.pricing[i].title %></td>
+                    <td><%= pandit.pricing[i].price %></td>
+                </tr>
+            <% } %>
+        </tbody>
+      </table>
+    </tr>
+    <p style="font-size: small;">*T&C applied</p>
+    <div class="column1 bg-white">
+      <div class="contact-inf0">
+          <div>
+          <h3 class="card-title"><i class="fa fa-address-book" aria-hidden="true"></i><strong>Contact Info:-</strong> </h3>
+          <p class="card-text bold"><%= pandit.name %></p>
+          <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> <%= pandit.city %>,<%= pandit.state %> </p>
+          <p class="card-text"><%= pandit.mobile_no %></p>
+          <p class="card-text"><%= pandit.email %></p>
+
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+</div>
+
+<div class="row1">
+  <div class="column1 column-1 about" >
+    <h2>About <%= pandit.name %>, <%= pandit.city %></h2>
+    <br>
+    <p class="photo-intro"><%= pandit.about %></p>
+    <br><h3>Sevices Offered by <%= pandit.name %>:-</h3>
+    <ul>
+        <li>Kundli Matching Astrology</li>
+        <li>Pre-wedding Puja</li>
+        <li>Sagan Puja</li>
+        <li>Wedding Puja</li>
+    </ul>
+
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

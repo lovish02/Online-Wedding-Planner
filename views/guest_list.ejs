@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="styles_list.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Oswald:wght@300&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Estonia&family=Merriweather:ital,wght@1,900&family=Oswald:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+        .row1{
+            display: flex;
+            background-color: #ecdada;
+        }
+        .text-bold{
+            font-weight: bold;
+        }
+        .text-centre{
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 20px;
+            margin-left: 50px;
+        } 
+        .button-style{
+            object-position: center;
+        }
+        .button-new{
+            margin-right: 20px;
+            padding-top: 10px;
+            margin-left: 50px;
+        }
+        .container { 
+            height: 200px;
+            position: relative;
+            border: 3px solid green; 
+        }
+        h3{
+            font-family: 'Oswald', sans-serif;
+        }
+        .event-bar{
+            display: inline;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .button-marg{
+            margin-right: 10px;
+        }
+        .btn-primary{
+            background-color: #bd9292;
+        }
+        .btn-guest{
+            justify-content: center;
+        }
+        .column1 {
+            flex: 50%;
+            padding: 10px;
+            margin-top: 150px;=
+            background-color: white;
+        }
+        .column-1{
+            flex: 65%;
+            margin-left: 30px;
+            height: auto;
+            margin-right: 10px;
+            background-color:white;
+        }
+        .column1{
+            background-color:wheat;
+            color: brown;
+        }
+        .about{
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 25px;
+            padding: 10px;
+            background-color: white;
+        }
+        .btn-color{
+            color: black;
+        }
+        tr{
+            border: 0.2px solid rgb(216, 213, 213);
+        }
+        .head-main{
+            font-family: 'Estonia', cursive;
+            font-family: 'Merriweather', serif;
+            font-family: 'Oswald', sans-serif;
+        }
+        .bg-ecdada{
+            background-color: #ecdada;
+            justify-content: center;
+        }
+        .img-div-set{
+            height: 650px;
+            width: 1000px;
+            object-fit: cover;
+        }
+        .img-set{
+            height: 100%;
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #ecdada;
+        }
+        .bg{
+            background-image: url('https://i.pinimg.com/originals/b0/0f/14/b00f147f3b827622546ade4c615a5c3a.jpg');
+            opacity: 80%;
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .btn-pink{
+            background-color: #c08d8d;
+        }
+        .op{
+            opacity: 100%;
+        }
+        .tab-marg{
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .btn-center{
+            text-align: center;
+        }
+        .card-style{
+            margin-right: auto;
+            margin-left: auto;
+            width: 50%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #ecdada;
+        }
+    </style>
+</head>
+
+<body class="bg">
+    <div class="op">
+        
+        <u>
+            <h1 class="head-main" style="text-align: center; font-weight: bolder;">THE EVENT MANAGER</h1>
+        </u>
+        <!--<p>This example creates a full page background image. Try to resize the browser window to see how it always will cover the full screen (when scrolled to top), and that it scales nicely on all screen sizes.</p>-->
+        <div class="card card-style">
+            <h5 class="card-header" style="text-align: center"><%= event.event_name %></h5>
+            <div class="card-body">
+              <p class="card-text">Date: <%= event.date %></p>
+              <p class="card-text">Start Time: <%= event.startTime %></p>
+              <p class="card-text">End Time: <%= event.endTime %></p>
+    
+            </div>
+          </div>
+        <h2 class="head-main" style="text-align: center; color: brown;">Event Details and Guest list</h2>
+        <br>
+        <!-- <p class="card-text">🟢Accepted:</p>
+        <p class="card-text">🟡Not Accepted:</p>
+        <p class="card-text">🔴Declined:</p> -->
+        <div class="tab-marg">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Party of</th>
+                        <th scope="col">Contact info</th>
+                        <th scope="col">E-mail id</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i = 0 ; i < event.guests.length; i++){ %>
+                        <tr>
+                           <th scope="row"><%= i + 1 %></th> 
+                           <td><%= event.guests[i].guest_name %></td>
+                           <td><%= event.guests[i].noOfAttendees %></td>
+                           <td><%= event.guests[i].contactNumber %></td>
+                           <td><%= event.guests[i].emailId %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>       
+                        
+                        
+                        
+                        
+                        <!-- <td>
+                            <div class="dropdown">
+                                <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown"
+                                    class="dropdown-toggle" href="#">
+                                    <span id="selected">Chose option</span><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    li><a href="#">🟢Invited</a></li>
+                                    <li><a href="#">🟡Not Invited</a></li>
+                                    <li><a href="#">🔴Declined</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                        </td> -->
+                    <!-- 
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>jljhk</td>
+                        <td>
+                            <div class="dropdown">
+                                <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown"
+                                    class="dropdown-toggle" href="#">
+                                    <span id="selected1">Invite Status</span><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">🟢Invited</a></li>
+                                    <li><a href="#">🟡Not Invited</a></li>
+                                    <li><a href="#">🔴Declined</a></li>
+                                </ul>
+                            </div> -->
+
+                            <!-- 
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">🟢Invited </a>
+                                <a class="dropdown-item" href="#">🟡Not Invited</a>
+                                <a class="dropdown-item" href="#">🔴Declined</a>
+                            </div> -->
+        
+        
+    
+
+    <div class="btn-center">
+        <button type="button" class="btn btn-pink" data-toggle="modal" data-target="#exampleModalLong">
+            +Add Guest
+        </button>
+    </div>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <% const url = "/e-invite/" + event.event_name %>
+        <form action="<%= url %>" method="post">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="heading">+ Add New Guest</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="background-color: #ecdada;">
+                    <div class="rendered-form">
+                        <div class="">
+                            <h1 access="false">Guest Details</h1>
+                        </div>
+                        <div class="formbuilder-text form-group">
+                            <label for="name" class="formbuilder-text-label">Guest Name&nbsp;<span class="formbuilder-required">*</span></label>
+                            <input type="text" name="name" autocomplete="off" placeholder="Enter Guest Name" autocomplete="off">
+                        </div>
+
+                        <div class="formbuilder-number form-group">
+                            <label for="noOfAttendees" class="formbuilder-number-label">No. of Attendees&nbsp;<span class="formbuilder-required">*</span></label>
+                            <input type="number" class="form-control" name="attendees" access="false" min="1" max="12" id="noOfAttendees" required="required" aria-required="true">
+                        </div>
+                        <div class="formbuilder-number form-group">
+                            <label for="mob_no" class="formbuilder-number-label">Contact Number<span
+                            class="formbuilder-required">*</span></label>
+                            <input type="tel" placeholder="Contact Number" class="form-control" name="mob_no" access="false" id="mob_no" required="required" aria-required="true" pattern="[0-9]{10}">
+                        </div>
+
+                        <div class="formbuilder-text form-group">
+                            <label for="email" class="formbuilder-text-label">Enter E-Mail Id<span class="formbuilder-required">*</span></label>
+                            <input type="email" placeholder="Enter E-Mail" class="form-control" name="email" access="false"id="email" required="required" aria-required="true">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn " data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-dark">+Add Guest to list</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-pink">Save changes</button>
+        </div>
+        </form>
+    </div>
+
+    <!-- <script>
+        $('.dropdown-menu a').click(function () {
+            $('#selected').text($(this).text());
+        });
+
+        $('.dropdown-menu a').click(function () {
+            $('#selected1').text($(this).text());
+        });
+
+
+    </script> -->
+
+</body>
+
+
+</html>
