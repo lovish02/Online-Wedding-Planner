@@ -1,0 +1,16 @@
+.template{
+	height: 700px;
+	width: 700px;
+	background: url(../images/temp1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: auto auto;
+}
+
+.text{
+	height: 20px;
+	width: 100px;
+	margin-left: 200px;
+	margin-top: 200px;
+	position: absolute;
+}

@@ -1,0 +1,75 @@
+<%- include("partials/header.ejs") %>
+
+
+<div class="row1">
+  <div class="column1 col1" >
+    <h1 style="display: inline; font-size: xx-large;" class="vendor-name"><%= caterer.name %></h1> 
+    <img class=""src="https://images.wedmegood.com/images/icons/verified-vendors/Verified+(desk+web).svg" alt="" style=" display: inline;">
+    <div class = "img-div-set">
+      <img class="img-centre img-set" src="<%= caterer.imgUrl %>" >
+    </div>
+    <h1 style="color: brown;">VIVAAH CERTIFIED✔️</h1><h2 style="font-size: large;"></h2>(Registered on Vivaah since <%= caterer.time %>) </h2>
+    <br>
+    <h2 style="font-size: large;">Industry experience- <%= caterer.exp %> </h2>
+    <h2 style="font-size: large;">Min Capacity- <%= caterer.mincap %> </h2>
+    <h2 style="font-size: large;">Max Capacity- <%= caterer.maxcap %> </h2>
+    <br>
+    <h2 style="font-size: large;">*Terms and Conditions</h2>
+    <h3>50% advance is mandatory</h3>
+    <h3>Outstation Travel & Stay charges borne by client</h3>    
+  </div>
+  <div class="column1 column-2 tab">
+      <h2>Pricings</h2>
+      <table >
+        <tbody>
+            <tr>
+              <th>Category</th>
+              <th>Prices</th>
+            </tr>
+            <% for(var i = 0; i < caterer.pricing.length; i++){ %>
+                <tr>
+                    <td><%= caterer.pricing[i].title %></td>
+                    <td><%= caterer.pricing[i].price %></td>
+                </tr>
+            <% } %>
+        </tbody>
+      </table>
+    </tr>
+    <p style="font-size: small;">*T&C applied</p>
+    <div class="column1 bg-white">
+      <div class="contact-inf0">
+          <div>
+          <h3 class="card-title"><i class="fa fa-address-book" aria-hidden="true"></i><strong>Contact Info:-</strong> </h3>
+          <p class="card-text bold"><%= caterer.name %></p>
+          <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i> <%= caterer.city %>,<%= caterer.state %> </p>
+          <p class="card-text"><%= caterer.mobile_no %></p>
+          <p class="card-text"><%= caterer.email %></p>
+
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+</div>
+
+<div class="row1">
+  <div class="column1 column-1 about" >
+    <h2>About <%= caterer.name %>, <%= caterer.city %></h2>
+    <br>
+    <p class="photo-intro"><%= caterer.about %></p>
+    <br><h3>Sevices Offered by <%= caterer.name %> Photography:-</h3>
+    <ul>
+        <li>Candid Photography</li>
+        <li>Traditional Photography</li>
+        <li>Pre-wedding shoots</li>
+        <li>CinematoGraphy</li>
+        <li>Traditional Videograhy</li>
+        <li>Bridal Photography</li>
+        <li>Wedding Films</li>
+        <li>Portfolio/Fashion Shoots</li>
+    </ul>
+
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

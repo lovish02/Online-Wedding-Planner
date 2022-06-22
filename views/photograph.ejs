@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Photographers</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="photographers-style.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/templatemo_style.css">
+  <link rel="stylesheet" type="text/css" href="css/templatemo_misc.css">
+  <!-- <link rel="stylesheet" type="text/css" href="templatemo_style.css"> -->
+</head>
+<body>
+<div class = "bgd">
+  <div class="site-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <ul class="social-icons">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-dribbble"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div> <!-- /.col-md-12 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+                <div class="main-header">
+                    <div class="container">
+                        <div id="menu-wrapper">
+                            <div class="row">
+                                <div class="logo-wrapper col-md-2 col-sm-2">
+                                    <img src="images/logo.png" class = "logo">
+                                </div> <!-- /.logo-wrapper -->
+                                <div class="col-md-10 col-sm-10 main-menu text-right">
+                                    <div class="toggle-menu visible-sm visible-xs"><i class="fa fa-bars"></i></div>
+                                    <ul class="menu-first">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/">About Us</a></li>
+                                        <li class="active"><a href="#services">Services</a></li>
+                                        <li><a href="/blog">Blog</a></li>
+                                        <li><a href="/e-invite">E-Invite</a></li> 
+                                        <li><a target = "_blank" href="http://localhost:5000/action.html">Live Stream</a></li>
+                                        <li><a href="/">Contact Us</a></li>                                 
+                                    </ul>                                    
+                                </div> <!-- /.main-menu -->
+                            </div> <!-- /.row -->
+                        </div> <!-- /#menu-wrapper -->                        
+                    </div> <!-- /.container -->
+                </div> <!-- /.main-header -->
+            </div> <!-- /.site-header -->
+  <div class="container con-style">
+    <% for(var i = 0; i < photographer.length; i++){ %>
+      <div class="col-sm-6">
+        <div class="card card-style">
+          <div class="img-div-set">
+            <img class="card-img-top img-set" src="<%= photographer[i].imgUrl %>" alt="Photographers">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><%= photographer[i].name %></h3>
+            <p class="card-text" ><i class="fa fa-map-marker" aria-hidden="true"></i> Place:- <%= photographer[i].city %></p>
+            <% if(photographer[i].pricing){ %>
+                <p class="card-text" ><i class="fa fa-inr" aria-hidden="true"> Price:- <%= photographer[i].pricing[0].price %> onwards</i></p>
+            <% }else{ %>
+              <p class="card-text" ><i class="fa fa-inr" aria-hidden="true"> Price:- As per the requirement.</i></p>
+            <% } %>
+            
+            <!-- <a href="photographer1.html" class="btn btn-primary" >Know More</a> -->
+            <form action = "<%= source %>" method="post">
+              <button class="btn btn-dark" type="submit" name="id" value="<%= photographer[i]._id %>">Know More</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</div>
+  

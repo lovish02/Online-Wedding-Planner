@@ -1,0 +1,192 @@
+.row1{
+    display: flex;
+    background-color: #ecdada;
+    
+  }
+
+.text-bold{
+    font-weight: bold;
+}
+
+.text-centre{
+    
+    /* text-align: center; */
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+    margin-left: 50px;
+} 
+
+.button-style{
+    object-position: center;
+}
+
+.button-new{
+    margin-right: 20px;
+    padding-top: 10px;
+    margin-left: 50px;
+}
+.container { 
+    height: 200px;
+    position: relative;
+    border: 3px solid green; 
+}
+
+/* .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: auto; 
+      } */
+
+h3{
+    font-family: 'Oswald', sans-serif;
+}
+
+.event-bar{
+    display: inline;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.button-marg{
+    margin-right: 10px;
+}
+
+/* .hthun{
+    margin-top: 100px;
+} */
+
+.btn-primary{
+    background-color: #bd9292;
+}
+
+
+.btn-guest{
+    justify-content: center;
+}
+
+/* html{
+    background-color: #ecdada;
+} */
+
+
+.column1 {
+    flex: 50%;
+    padding: 10px;
+     /* Should be removed. Only for demonstration */
+    margin-top: 150px;=
+    background-color: white;
+    
+  }
+
+  .column-1{
+      flex: 65%;
+      margin-left: 30px;
+      height: auto;
+      margin-right: 10px;
+      background-color:white;
+  }
+
+  .column1{
+    background-color:wheat;
+    color: brown;
+}
+
+.about{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 25px;
+    padding: 10px;
+    background-color: white;
+}
+
+.btn-color{
+    color: black;
+}
+
+tr{
+    border: 0.2px solid rgb(216, 213, 213);
+}
+
+.head-main{
+    font-family: 'Estonia', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.bg-ecdada{
+    background-color: #ecdada;
+    justify-content: center;
+}
+
+.img-div-set{
+	height: 650px;
+	width: 1000px;
+	object-fit: cover;
+}
+
+.img-set{
+	height: 100%;
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #ecdada;
+  }
+  
+  
+
+
+
+
+.bg{
+    background-image: url('https://i.pinimg.com/originals/b0/0f/14/b00f147f3b827622546ade4c615a5c3a.jpg');
+    opacity: 80%;
+    /* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://i.pinimg.com/originals/b0/0f/14/b00f147f3b827622546ade4c615a5c3a.jpg");
+    object-fit: cover; */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-pink{
+    background-color: #c08d8d;
+
+}
+
+
+
+.op{
+    opacity: 100%;
+}
+
+.tab-marg{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.btn-center{
+    text-align: center;
+}
+
+.card-style{
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ecdada;
+}
