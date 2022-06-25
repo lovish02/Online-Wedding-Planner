@@ -13,6 +13,8 @@
   <link rel="stylesheet" type="text/css" href="css/templatemo_style.css">
   <link rel="stylesheet" type="text/css" href="css/templatemo_misc.css">
   <!-- <link rel="stylesheet" type="text/css" href="templatemo_style.css"> -->
+  <!-- <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 <div class = "bgd">
@@ -78,5 +80,11 @@
       </div>
     <% } %>
   </div>
+  <script type="text/javascript">
+    $(window).scroll(function() {
+        $('.main-header').toggleClass('scrolled', $(this).scrollTop() > 1);
+        console.log("scrolled");
+    });
+  </script>
 </div>
   
